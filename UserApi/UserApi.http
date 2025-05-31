@@ -1,0 +1,38 @@
+@UserApi_HostAddress = http://localhost:5152
+
+### Exemplo de requisições para testar a API UserApi
+
+# Listar usuários
+GET http://localhost:5152/api/users
+Accept: application/json
+
+### Criar usuário
+POST http://localhost:5152/api/users
+Content-Type: application/json
+
+{
+  "name": "João Silva",
+  "email": "joao@email.com",
+  "phone": "11999999999"
+}
+
+### Buscar usuário por ID
+GET http://localhost:5152/api/users/1
+Accept: application/json
+
+### Atualizar usuário
+PUT http://localhost:5152/api/users/1
+Content-Type: application/json
+
+{
+  "name": "João da Silva",
+  "email": "joao@email.com",
+  "phone": "2233333333333"
+}
+
+### Remover usuário
+DELETE http://localhost:5152/api/users/1
+
+### Consumir posts da API externa (JSONPlaceholder)
+GET http://localhost:5152/api/external/posts
+Accept: application/json
